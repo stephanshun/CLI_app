@@ -4,21 +4,23 @@ from functions import *
 string = input("Enter a string:\n")
 
 # Intializes starting coordinates
-x = 0
-y = 0
+start_x = 0
+start_y = 0
 
-print("Starting coordinates are: " + "(" + str(x) + "," + str(y) + ")")
+print("Starting coordinates are: " + "(" + str(start_x) + "," + str(start_y) + ")")
 
 # Converts command string into a list 
 string = string.replace(" ", "")
 list = string.split(',')
 
 # Retrieves final coordinates
-x, y = derive_coordinates(list, x, y)
+end_x = 0
+end_y = 0
+end_x, end_y = derive_coordinates(list, start_x, start_y)
 
-print("Final coordinates are: " + "(" + str(x) + "," + str(y) + ")")
+print("Final coordinates are: " + "(" + str(end_x) + "," + str(end_y) + ")")
 
 # Creates OUTPUT variable
-output = find_distance(x, y)
+output = find_distance(start_x, start_y, end_x, end_y)
 
 print("Minimum distance to starting point is " + str(output) + " units.")
