@@ -14,8 +14,6 @@ string = string.replace(" ", "")
 list = string.split(',')
 
 # Retrieves final coordinates
-end_x = 0
-end_y = 0
 end_x, end_y = derive_coordinates(list, start_x, start_y)
 
 print("Final coordinates are: " + "(" + str(end_x) + "," + str(end_y) + ")")
